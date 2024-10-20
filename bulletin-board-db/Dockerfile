@@ -7,4 +7,5 @@ WORKDIR /init
 COPY init-db.* ./
 
 RUN chmod +x ./init-db.sh
-RUN /opt/mssql/bin/sqlservr & ./init-db.sh
+
+CMD /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 30 && ./init-db.sh"
