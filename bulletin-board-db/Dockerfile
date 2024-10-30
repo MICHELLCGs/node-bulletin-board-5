@@ -4,7 +4,7 @@ ENV ACCEPT_EULA=Y \
     MSSQL_SA_PASSWORD=DockerCon!!!
 
 WORKDIR /init
-COPY bulletin-board-db/init-db.* ./
+COPY init-db.* ./
 
 RUN chmod +x ./init-db.sh
 
